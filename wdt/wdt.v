@@ -1,4 +1,4 @@
-module wdt(pclk_i, prst_i, psel_i, penable_i, paddr_i, pwrite_i, pwdata_i, activity_i, pready_o, prdata_o, sysrst_o)
+module wdt(pclk_i, prst_i, psel_i, penable_i, paddr_i, pwrite_i, pwdata_i, activity_i, pready_o, prdata_o, sysrst_o);
 
 localparam WIDTH = 8;
 
@@ -10,7 +10,7 @@ localparam TIMEOUT_REG_ADDR = 8'hA0;
 
 input pclk_i, prst_i, psel_i, penable_i, pwrite_i,
 input [WIDTH-1:0] paddr_i, pwdata_i; 
-input activity_i,
+input activity_i;
 output reg [WIDTH-1] prdata_o;
 output reg pready_o,  sysrst_o;
 
